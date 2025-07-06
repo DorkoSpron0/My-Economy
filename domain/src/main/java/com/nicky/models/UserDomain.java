@@ -1,5 +1,7 @@
 package com.nicky.models;
 
+import java.util.List;
+
 public class UserDomain {
 
     private Long id;
@@ -7,14 +9,17 @@ public class UserDomain {
     private String email;
     private String password;
 
+    private List<AccountDomain> accounts;
+
     public UserDomain() {
     }
 
-    public UserDomain(Long id, String username, String email, String password) {
+    public UserDomain(Long id, String username, String email, String password, List<AccountDomain> accounts) {
         this.id = id;
         this.username = username;
         this.email = email;
         this.password = password;
+        this.accounts = accounts;
     }
 
     public Long getId() {
@@ -47,5 +52,13 @@ public class UserDomain {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public List<AccountDomain> getAccounts() {
+        return accounts;
+    }
+
+    public void setAccounts(List<AccountDomain> accounts) {
+        this.accounts = accounts;
     }
 }

@@ -1,4 +1,4 @@
-package com.nicky.usecases;
+package com.nicky.usecases.user;
 
 import com.nicky.models.UserDomain;
 import com.nicky.ports.in.users.LoginUserUseCase;
